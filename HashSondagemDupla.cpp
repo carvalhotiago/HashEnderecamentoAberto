@@ -60,7 +60,6 @@ bool HashSondagemDupla::Insert(int key, int data)
 	while (val != 0 && i < this->tableSize - 1)
 	{
 		this->numeroDeColisoes++;
-		cout << "Colisao ao tentar adicionar " << data << " no espaco " << hash << endl;
 		i++;
 		hash = HashFunction(key, i);
 		val = hashTable->at(hash);
